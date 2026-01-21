@@ -1,0 +1,50 @@
+syntax = "proto3";
+
+package glossary;
+
+service GlossaryService {
+  rpc AllEntries (GetAllRequest) returns (GetAllResponse) {}
+
+  rpc GetEntry (GetEntryRequest) returns (EntryResponse) {}
+
+  rpc PostEntry (PostEntryRequest) returns (EntryResponse) {}
+
+  rpc ModifyEntry (ModifyEntryRequest) returns (EntryResponse) {}
+  
+  rpc DeleteEntry (DeleteEntryRequest) returns (EntryResponse) {}
+}
+
+message GetAllRequest {}
+
+message GetAllResponse {
+  map<string, Entry> entries = 1;
+}
+
+message GetEntryRequest {
+  string key = 1;
+}
+
+message PostEntryRequest {
+  string key = 1;
+  Entry entry = 2;
+}
+
+message ModifyEntryRequest {
+  string key = 1;
+  optional string description = 2;
+  optional string reference = 3;
+}
+
+message DeleteEntryRequest {
+  string key = 1;
+}
+
+message EntryResponse {
+  Entry entry = 1;
+}
+
+message Entry {
+  string name = 1;
+  string description = 2;
+  string reference = 3;
+}

@@ -1,0 +1,2 @@
+# This directory contains generated protobuf files
+# Run: python tools/build_proto.py to generate them

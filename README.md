@@ -160,3 +160,8 @@
 3. Искусственный характер нагрузки
 4. Отсутствие базы данных
 5. In-memory хранилище может приводить к утечкам памяти
+
+
+### Исследовательская задача
+1. "Performance Evaluation of REST, GraphQL, and gRPC in Microservices Architectures"
+2. Benchmarking GraphQL vs REST vs gRPC: A Network Efficiency Perspective
